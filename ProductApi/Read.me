@@ -1,0 +1,87 @@
+Statement/Problem Given - C# and Angular Full-Stack Developer Interview Test
+Section 1: C# (Back-End)
+1. Object-Oriented Programming:
+Write a C# class that demonstrates inheritance, polymorphism, encapsulation, and
+abstraction.
+2. ASP.NET Core:
+Create a simple RESTful API using ASP.NET Core. The API should have endpoints for
+CRUD operations on a Product entity
+
+
+
+Summary of OOP Concepts Demonstrated:
+
+Concept	Where & How
+Inheritance	SmartProduct inherits from abstract base class ProductBase
+Abstraction	ProductBase is abstract with abstract method GetDetails() forcing implementation in derived classes
+Polymorphism	SmartProduct overrides GetDetails() method to provide custom behavior
+Encapsulation	Private _price field with controlled Price property validation in ProductBase
+
+Product API – ASP.NET Core Minimal API Example
+
+Overview
+
+The Product API is a simple ASP.NET Core 9.0 Minimal API project that demonstrates key software engineering concepts:
+Object-Oriented Programming (OOP)
+Using classes that highlight Inheritance, Polymorphism, Abstraction, and Encapsulation.
+RESTful API with CRUD Operations
+Provides basic Create, Read, Update, and Delete endpoints for managing products using in-memory data (no database).
+Swagger/OpenAPI Integration
+For easy API documentation and testing.
+
+
+Key Features
+
+OOP Concepts Implemented:
+Abstraction & Polymorphism:
+Abstract ProductBase class with an abstract GetDetails() method, overridden by SmartProduct.
+Inheritance:
+SmartProduct inherits from ProductBase.
+Encapsulation:
+Private fields with controlled property access.
+Minimal API with Endpoints:
+GET /api/products – Get all products
+GET /api/products/{id} – Get product by ID
+POST /api/products – Add new product
+PUT /api/products/{id} – Update product
+DELETE /api/products/{id} – Delete product
+Swagger UI Enabled
+Access via /swagger in your browser when running the project.
+Dummy In-Memory Repository
+ProductRepository simulates database CRUD operations.
+
+
+ProductApi/
+├── Domain/
+│   ├── Product.cs
+│   ├── ProductBase.cs
+│   └── SmartProduct.cs
+├── Infrastructure/
+│   ├── IProductRepository.cs
+│   └── ProductRepository.cs
+├── Program.cs
+├── ProductApi.csproj
+├── Properties/
+│   └── launchSettings.json
+
+
+How to Run
+
+Restore packages & build
+dotnet restore
+dotnet build
+Run the API
+dotnet run
+Access API via Browser/Postman
+Swagger UI: http://localhost:5197/swagger
+API Base URL: http://localhost:5197/api/products
+Technologies Used
+
+ASP.NET Core 9.0 Minimal API
+C# 13 with Object-Oriented Design Principles
+Swagger (via Swashbuckle.AspNetCore)
+In-Memory Repository (no database)
+.NET SDK 9.0.101
+
+
+
